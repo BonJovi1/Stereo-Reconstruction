@@ -16,10 +16,11 @@ ground truth poses.
 Report your observations with a screenshot of your reconstruction. 
 [Bonus] Compare different stereo matching algorithms.
 
-Next part:
+Second question:
 
 Using the generated reconstruction from the previous part, synthesize a new image taken by a virtual monocular camera fixed at any arbitrary position and orientation. Your task in this part is to recover this pose using an iterative Perspective-from-n-Points (PnP) algorithm. The steps are as follows,
-• Obtain a set of 2D-3D correspondences between the the image and the point cloud. Since here you’re generating the image, this should be easy to obtain.
-• For this set of correspondences compute the total reprojection error c = 􏰂i ∥xi − PkXi∥2 where Pk = K[Rk|tk], Xi is the 3D point in the world frame, xi is its corresponding projection.
-• Solve for the pose Tk that minimizes this non-linear reprojection error using a Gauss-Newton (GN) scheme. Recall that in GN we start with some initial estimated value xo and iteratively refine the estimate using x1 = ∆x +x0, where ∆x is obtained by solving the normal equations JT J∆x = −JT e, until convergence.
+- Obtain a set of 2D-3D correspondences between the the image and the point cloud. Since here you’re generating the image, this should be easy to obtain. 
+- For this set of correspondences compute the total reprojection error c = 􏰂i ∥xi − PkXi∥2 where Pk = K[Rk|tk], Xi is the 3D point in the world frame, xi is its corresponding projection. 
+- Solve for the pose Tk that minimizes this non-linear reprojection error using a Gauss-Newton (GN) scheme. Recall that in GN we start with some initial estimated value xo and iteratively refine the estimate using x1 = ∆x +x0, where ∆x is obtained by solving the normal equations JT J∆x = −JT e, until convergence.
+
 The main steps in this scheme are computing the corresponding Jacobians and updating the es- timates correctly. For our problem, use a 12 × 1 vector parameterization for Tk (the top 3 × 4 submatrix). Run the optimization for different choices of initialization and report your observations.
