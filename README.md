@@ -1,5 +1,7 @@
 # Stereo-Reconstruction
-Generating a dense 3D point cloud reconstruction of a scene from stereo images
+Generating a dense 3D point cloud reconstruction of a scene from stereo images \
+If the notebook doesn't load, use the jupyter nbviewer  
+https://nbviewer.jupyter.org/github/BonJovi1/Stereo-Reconstruction/blob/master/code.ipynb
 
 ## The question
 
