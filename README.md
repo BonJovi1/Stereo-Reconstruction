@@ -2,7 +2,7 @@
 Generating a dense 3D point cloud reconstruction of a scene from stereo images \
 If the notebook doesn't load, use the jupyter nbviewer  
 https://nbviewer.jupyter.org/github/BonJovi1/Stereo-Reconstruction/blob/master/code.ipynb
-
+fvvrfr
 ## The question
 
 3D point cloud generation is very useful in robotics for several tasks such as object detection, motion estimation (3D-3D matching or 3D-2D matching), SLAM, and other forms of scene understanding. Stereo cameras provide us with a convenient way to generate dense point clouds. Dense here, in contrast to sparse, means all the image points are used for the reconstruction. You have to generate a dense 3D point cloud reconstruction of a scene from stereo images. 
